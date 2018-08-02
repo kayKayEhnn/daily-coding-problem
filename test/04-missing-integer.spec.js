@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const missingInteger = require('../04-missing-integer')
+const missingInteger = require('../src/04-missing-integer')
 
 const testCases = [
   [

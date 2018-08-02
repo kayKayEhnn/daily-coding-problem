@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const { TreeNode, findUnivalSubtrees } = require('../08-unival-tree')
+const { TreeNode, findUnivalSubtrees } = require('../src/08-unival-tree')
 
 // https://sketch.io/render/sk-a3d64ba04c701b86e4343edb7b9c340c.jpeg
 const testCases = [

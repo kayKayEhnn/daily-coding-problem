@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const sinon = require('sinon')
 
-const jobScheduler = require('../10-job-scheduler')
+const jobScheduler = require('../src/10-job-scheduler')
 
 describe('Job Scheduler', function () {
   it('Should work', function () {

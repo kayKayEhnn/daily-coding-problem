@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const arrayProduct = require('../02-array-product')
+const arrayProduct = require('../src/02-array-product')
 
 let testCases = [
   [

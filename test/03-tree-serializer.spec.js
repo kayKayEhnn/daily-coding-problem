@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const { Node, serialize, deserialize } = require('../03-tree-serializer')
+const { Node, serialize, deserialize } = require('../src/03-tree-serializer')
 
 describe('Tree Serializer', function () {
   it('Should work', function () {

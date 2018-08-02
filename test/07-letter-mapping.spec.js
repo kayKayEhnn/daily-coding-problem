@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const letterMapping = require('../07-letter-mapping')
+const letterMapping = require('../src/07-letter-mapping')
 
 const testCases = [
   [

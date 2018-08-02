@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const largestSum = require('../09-largest-sum')
+const largestSum = require('../src/09-largest-sum')
 
 const testCases = [
   [

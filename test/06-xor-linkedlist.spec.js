@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const XORLinkedList = require('../06-xor-linkedlist')
+const XORLinkedList = require('../src/06-xor-linkedlist')
 
 describe('XOR Linked List', function () {
   it('Should work', function () {

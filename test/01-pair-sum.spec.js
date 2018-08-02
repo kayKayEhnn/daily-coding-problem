@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const pairSum = require('../01-pair-sum')
+const pairSum = require('../src/01-pair-sum')
 
 let testCases = [
   [

@@ -1,6 +1,6 @@
 const { expect } = require('chai')
 
-const { cons, car, cdr } = require('../05-pair')
+const { cons, car, cdr } = require('../src/05-pair')
 
 describe('Pair', function () {
   it('Car Should work', function () {
