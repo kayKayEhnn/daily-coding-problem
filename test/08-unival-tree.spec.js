@@ -43,8 +43,8 @@ const testCases = [
 ]
 
 describe('Unival Tree', function () {
-  testCases.forEach(tc => {
-    it(`Should work for ${tc[0]}`, function () {
+  testCases.forEach((tc, ix) => {
+    it(`Should work for test case ${ix}`, function () {
       expect(findUnivalSubtrees.apply(null, tc[0])).to.equal(tc[1])
     })
   })
