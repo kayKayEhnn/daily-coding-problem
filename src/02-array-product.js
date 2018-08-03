@@ -8,14 +8,22 @@
 // Follow-up: what if you can't use division?
 // 1. Naive O(n^2) solution
 // 2. Implement divison manually
+// 3. Multiply by -1st power of divisor
 
 function arrayProduct (arr) {
-  let totalProduct = arr.reduce((a, b) => a * b)
-  let newArr = arr.slice()
-
-  for (let i = 0; i < newArr.length; i++) {
-    newArr[i] = totalProduct / newArr[i]
+  let zeroCount = 0
+  let totalProduct = 1
+  for (let i = 0; i < arr.length; i++) {
+    let curr = arr[i]
+    zeroCount += curr === 0
+    totalProduct *= curr || 1
   }
+
+  let newArr = arr.map(a => {
+    if (zeroCount > 1) return 0
+    if (zeroCount === 1) return totalProduct * (a === 0)
+    return totalProduct * Math.pow(a, -1)
+  })
 
   return newArr
 }
