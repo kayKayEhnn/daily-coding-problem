@@ -9,7 +9,7 @@ let testCases = [
   ]
 ]
 
-describe('Pair Sum', function () {
+describe('01. Pair Sum', function () {
   testCases.forEach(tc => {
     it(`Should work for ${tc[0]}`, function () {
       expect(pairSum.apply(null, tc[0])).to.equal(tc[1])

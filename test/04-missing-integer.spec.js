@@ -65,7 +65,7 @@ const testCases = [
   ]
 ]
 
-describe('Missing Integer', function () {
+describe('04. Missing Integer', function () {
   testCases.forEach(tc => {
     it(`Should work for ${tc[0]}`, function () {
       expect(missingInteger.apply(null, tc[0])).to.equal(tc[1])

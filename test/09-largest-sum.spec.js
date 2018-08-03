@@ -53,7 +53,7 @@ const testCases = [
   ]
 ]
 
-describe('Largest Sum', function () {
+describe('09. Largest Sum', function () {
   testCases.forEach(tc => {
     it(`Should work for ${tc[0]}`, function () {
       expect(largestSum.apply(null, tc[0])).to.equal(tc[1])

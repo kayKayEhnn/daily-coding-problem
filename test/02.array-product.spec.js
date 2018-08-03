@@ -25,7 +25,7 @@ let testCases = [
   ]
 ]
 
-describe('Array Product', function () {
+describe('02. Array Product', function () {
   testCases.forEach(tc => {
     it(`Should work for ${tc[0]}`, function () {
       expect(arrayProduct.apply(null, tc[0])).to.deep.equal(tc[1])

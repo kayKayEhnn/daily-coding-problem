@@ -3,7 +3,7 @@ const sinon = require('sinon')
 
 const jobScheduler = require('../src/10-job-scheduler')
 
-describe('Job Scheduler', function () {
+describe('10. Job Scheduler', function () {
   it('Should work', function () {
     const clock = sinon.useFakeTimers()
     let spy = sinon.spy()

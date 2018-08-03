@@ -21,7 +21,7 @@ const testCases = [
   ]
 ]
 
-describe('Letter Mapping', function () {
+describe('07. Letter Mapping', function () {
   testCases.forEach(tc => {
     it(`Should work for ${tc[0]}`, function () {
       expect(letterMapping.apply(null, tc[0])).to.equal(tc[1])
