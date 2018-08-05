@@ -7,6 +7,7 @@ function pairSum (arr, k) {
   for (let i = 0; i < arr.length; i++) {
     let current = arr[i]
     if (set.has(k - current)) return true
+
     set.add(current)
   }
 
