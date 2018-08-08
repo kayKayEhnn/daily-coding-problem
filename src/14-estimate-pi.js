@@ -4,7 +4,7 @@
 // Estimate π to 3 decimal places using a Monte Carlo method.
 
 // Explanation: https://pastebin.com/6v50sbvW
-function pi (precision = 3) {
+function pi (precision = 3, prng = Math.random) {
   precision++ // integer part accounts for precision as well
 
   const circleRadius = 1
@@ -16,7 +16,7 @@ function pi (precision = 3) {
   let threshold = Math.pow(10, -precision)
 
   while (Math.abs(Math.PI - estimate) > threshold) {
-    let [x, y] = [Math.random(), Math.random()]
+    let [x, y] = [prng(), prng()]
     let hypot = Math.hypot(x, y)
 
     pointsIn += (hypot <= circleRadius)
