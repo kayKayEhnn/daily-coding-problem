@@ -7,7 +7,7 @@ describe('05. Pair', function () {
     expect(car(cons(3, 4))).to.equal(3)
   })
 
-  it('Car Should work', function () {
+  it('Cdr Should work', function () {
     expect(cdr(cons(3, 4))).to.equal(4)
   })
 })
