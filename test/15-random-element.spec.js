@@ -3,17 +3,12 @@ const path = require('path')
 
 const { expect } = require('chai')
 const SeedRandom = require('seedrandom')
+const MockStream = require('./util/mock-stream')
 
 const randomElement = require('../src/15-random-element')
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const dataPath = path.join(__dirname, '../data')
-
-function createStreamFactory (filePath) {
-  return function createStream () {
-    return fs.createReadStream(filePath)
-  }
-}
 
 describe('15. Random Element', function () {
   let prng
@@ -23,11 +18,10 @@ describe('15. Random Element', function () {
   })
 
   it('Should work with large file', function (done) {
-    let createStream = createStreamFactory(path.join(dataPath, 'large-file.txt'))
+    let createStream = () => fs.createReadStream(path.join(dataPath, 'large-file.txt'))
     let cb = (err, char) => {
-      if (err) throw err
+      if (err) done(err)
 
-      expect(ALPHABET.indexOf(char)).to.be.at.least(0)
       expect(char).to.match(/[A-Z]/)
 
       done()
@@ -46,7 +40,9 @@ describe('15. Random Element', function () {
       histogramMap.set(ALPHABET[i], 0)
     }
 
-    let createStream = createStreamFactory(path.join(dataPath, 'tiny-file.txt'))
+    let alphabetBuffer = Buffer.from(ALPHABET)
+    let createStream = () => new MockStream(alphabetBuffer)
+
     let cb = (err, char) => {
       if (err) throw err
 
