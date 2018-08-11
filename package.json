@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha '**/*.spec.js' --recursive"
   },
   "keywords": [],
   "author": "",
