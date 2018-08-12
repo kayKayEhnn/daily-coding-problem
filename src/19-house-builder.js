@@ -48,8 +48,3 @@ function houseBuilder (matrix) {
 }
 
 module.exports = houseBuilder
-houseBuilder([
-  [5, 6, 8],
-  [1, 4, 3],
-  [3, 2, 1]
-])
