@@ -6,28 +6,25 @@
 
 function classroomLectures (lectures) {
   let rooms = []
+  lectures.sort((a, b) => a[1] - b[1])// order by end time asc.
+
   for (let i = 0; i < lectures.length; i++) {
     let availableIx = -1
     let lecture = lectures[i]
-    for (let j = 0; j < rooms.length && availableIx === -1; j++) {
+    for (let j = 0; j < rooms.length; j++) {
       let roomLectures = rooms[j]
-      let possible = true
-      for (let k = 0; k < roomLectures.length && possible; k++) {
-        if (intersects(roomLectures[k], lecture)) possible = false
-      }
+      let possible = roomLectures <= lecture[0]
 
       if (possible) availableIx = j
     }
 
-    if (availableIx === -1) rooms.push([lecture])
-    else rooms[availableIx].push(lecture)
+    let endTime = lecture[1]
+    if (availableIx === -1) rooms.push(endTime)
+    else rooms[availableIx] = endTime
   }
 
   return rooms.length
-
-  function intersects (a, b) {
-    return a[0] < b[1] && a[1] > b[0]
-  }
 }
 
 module.exports = classroomLectures
+classroomLectures([[0, 15], [10, 30], [15, 45], [30, 40], [40, 45]])
