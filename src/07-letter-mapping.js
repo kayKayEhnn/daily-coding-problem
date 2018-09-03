@@ -19,13 +19,7 @@ function decodeWays (str) {
   return dp[str.length]
 
   function isValid (char1, char2) {
-    switch (true) {
-      case char1 === '1':
-      case char1 === '2' && char2 <= '6':
-        return true
-      default:
-        return false
-    }
+    return char1 === '1' || (char1 === '2' && char2 <= '6')
   }
 }
 
