@@ -1,1 +1,1 @@
-# Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com) [![Build Status](https://travis-ci.org/kayKayEhnn/daily-coding-problem.svg?branch=master)](https://travis-ci.org/kayKayEhnn/daily-coding-problem)
+# Solutions for [Daily Coding Problem](https://www.dailycodingproblem.com) [![Build Status](https://travis-ci.org/kaykayehnn/daily-coding-problem.svg?branch=master)](https://travis-ci.org/kayKayEhnn/daily-coding-problem)
